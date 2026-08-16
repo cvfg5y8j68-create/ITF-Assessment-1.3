@@ -27,6 +27,10 @@
       body {background-color: var(--background-color);}
       header, footer {background-color: var(--c-background-highlights);}
       main, footer, header {color: var(--base-font-color);}
+      #navigation a {color: var(--c-magenta);}
+      #related-links a {color: var(--c-magenta);}
+      #navigation a:hover {color: var(--c-orange);}
+      #related-links a:hover {color: var(--c-orange);}
     </style>
 
   </head>
@@ -38,13 +42,17 @@
       <h1>Header</h1>
     </header>
 
+  <section>
+    <section id="navigation">
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Our team</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="our-team.html">Our team</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
+    </section>
+  
 
        <!-- A Search form is another common non-linear way to navigate through a website. -->
 
@@ -80,13 +88,16 @@
       <aside>
         <h2>Related</h2>
 
-        <ul>
-          <li><a href="#">Oh I do like to be beside the seaside</a></li>
-          <li><a href="#">Oh I do like to be beside the sea</a></li>
-          <li><a href="#">Although in the North of England</a></li>
-          <li><a href="#">It never stops raining</a></li>
-          <li><a href="#">Oh well...</a></li>
+        <section>
+          <section id="related-links">
+          <ul>
+          <li><a href="oh-i-do-like-to-be-beside-the-seaside.html">Oh I do like to be beside the seaside</a></li>
+          <li><a href="oh-i-do-like-to-be-beside-the-sea.html">Oh I do like to be beside the sea</a></li>
+          <li><a href="although-in-the-north-of-england.html">Although in the North of England</a></li>
+          <li><a href="it-never-stops-raining.html">It never stops raining</a></li>
+          <li><a href="oh-well.html">Oh well...</a></li>
         </ul>
+      </section>
       </aside>
 
     </main>
