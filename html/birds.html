@@ -6,9 +6,45 @@
     <style> 
 
     </style>
-
+    
     <script>
+      const birds = {
+      pardalote: {
+        src: "http://www.outgrabe.net/bird00.jpg",
+        alt: "Pardalote",
+        credit: "Pardalote by fir0002 (CC-by-NC)"
+      },
+      "purple-swamp-hen": {
+        src: "http://www.outgrabe.net/bird01.jpg",
+        alt: "Purple Swamp Hen",
+        credit: "Purple Swamp Hen by Toby Hudson (CC-by-SA)"
+      },
+      "white-headed-stilt": {
+        src: "http://www.outgrabe.net/bird02.jpg",
+        alt: "White-headed Stilt",
+        credit: "White-headed Stilt by JJ Harrison (CC-by-SA)"
+      },
+      "inland-thornbill": {
+        src: "http://www.outgrabe.net/bird03.jpg",
+        alt: "Inland Thornbill",
+        credit: "Inland Thornbill by Peter Jacob (CC-by-SA)"
+      },
+      "rose-robin": {
+        src: "http://www.outgrabe.net/bird04.jpg",
+        alt: "Rose Robin",
+        credit: "Rose Robin by JJ Harrison (CC-by-SA)"
+      }
+    };
 
+    function changebird(bird) {
+      const birdData = birds[bird];
+      const image = document.getElementById("bird-image");
+      const credit = document.getElementById("credit");
+
+      image.src = birdData.src;
+      image.alt = birdData.alt;
+      credit.textContent = birdData.credit;
+    }
     </script>
   </head>
   
@@ -16,7 +52,7 @@
     <main>
       <h1>Birds Of Australia</h1>
 
-      <img src="http://www.outgrabe.net/bird00.jpg" alt="Pardalote" width="1100" height="700">
+      <img id="bird-image" src="http://www.outgrabe.net/bird00.jpg" alt="Pardalote" width="1100" height="700">
       
       <p id = "credit">Pardalote by fir0002 (CC-by-NC)</p>
 
@@ -32,9 +68,7 @@
         <button type="button" onclick="changebird('rose-robin')">
           Rose Robin</button>
       </div>
-
-
-
+      
     </main>
   </body>
 </html>
