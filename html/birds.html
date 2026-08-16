@@ -11,11 +11,11 @@
       --heading-color: rgb(54, 68, 250);
     }
       [data-theme="dark"]{
-        --primary-color: rgb(10, 5, 1);
-       --secondary-color: rgb(73, 73, 69);
-       --bg-color: rgb(100, 102, 105);
-       --font-color: rgb(240, 4, 4);
-       --heading-color: rgb(59, 59, 59);
+        --primary-color: rgb(63, 63, 62);
+       --secondary-color: rgb(245, 245, 2);
+       --bg-color: rgb(0, 3, 7);
+       --font-color: rgb(250, 246, 246);
+       --heading-color: rgb(139, 139, 135);
       }
       main {max-width: 1100px; margin: 0 auto;}
       main {background-color: var(--bg-color)}
@@ -62,6 +62,15 @@
       image.alt = birdData.alt;
       credit.textContent = birdData.credit;
     }
+    function changetheme() {
+      var root = document.documentElement;
+      var currenttheme = root.getAttribute("data-theme");
+      if (currenttheme === "dark") {
+        root.setAttribute("data-theme", "light");
+      }
+      else {root.setAttribute("data-theme", "dark")}
+      }
+    
     </script>
   </head>
   
@@ -85,6 +94,10 @@
         <button type="button" onclick="changebird('rose-robin')">
           Rose Robin</button>
       </div>
+
+      <button type="button" onclick="changetheme()">
+        Toggle Theme
+      </button>
 
     </main>
   </body>
